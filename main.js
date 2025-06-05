@@ -31,7 +31,7 @@ const getFullName = (person) => {
     }
   }
   return first + ' ' + last
-};
+}; 
  
 
 const setFirstName = (obj, name) => obj.firstName = name
