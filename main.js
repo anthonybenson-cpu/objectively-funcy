@@ -1,11 +1,38 @@
 // YOUR CODE GOES HERE!!!
 /*************************/
-const getFirstName = (obj) => obj.firstName
+const getFirstName = (obj) => {
+  // console.log(obj)
+  // console.log(items)
+  for(let key in obj){
+    if(key === "firstName"){
+      return obj[key]
+    }
+  }
+}
 
-const getLastName = (obj) => obj.lastName
+const getLastName = (obj) =>{
+  for(let key in obj){
+    if(key === "lastName"){
+      return obj[key]
+    }
+  }
+}
 
-const getFullName = (obj) =>
-  `${obj.firstName} ${obj.lastName}`
+const getFullName = (person) => {
+  let first = ''
+  let last = ''
+
+
+  for(let key in person) {
+    if (key === 'firstName') {
+      first = person[key]
+    }else if (key === 'lastName') {
+      last = person[key]
+    }
+  }
+  return first + ' ' + last
+};
+ 
 
 const setFirstName = (obj, name) => obj.firstName = name
 
